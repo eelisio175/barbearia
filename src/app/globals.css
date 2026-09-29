@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-300: #f2d59a;
+  --color-gold-400: #e4b95e;
+  --color-gold-500: #d4a03a;
+  --color-gold-600: #b8862b;
+  --color-ink-950: #08080a;
+  --color-ink-900: #0f0f13;
+  --color-ink-800: #17171d;
+  --color-ink-700: #22222a;
+  --color-ink-600: #2f2f3a;
+  --font-display: "Georgia", "Times New Roman", serif;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  color: #e7e7ea;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: #0f0f13;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+  cursor: pointer;
+}
+
+.stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #d4a03a 0 12px,
+    #e7e7ea 12px 24px,
+    #b91c1c 24px 36px,
+    #e7e7ea 36px 48px
+  );
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease-out both;
+}
